@@ -1,4 +1,4 @@
-# Modelo Estrella — Relojería "Tempus"
+# Modelo Estrella — Relojería "Exclusive Time"
 
 ## 1. Pregunta de negocio y KPI
 
