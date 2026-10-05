@@ -1,0 +1,15 @@
+// Medida 1 - Total (SUM)
+Total Votos = SUM ( movies[VOTES] )
+
+// Medida 2 - Promedio (AVERAGE)
+Calificación Promedio = AVERAGE ( movies[RATING] )
+
+// Medida 3 - Derivada (DIVIDE)
+// Solo ~5 % de las peliculas tienen Gross; el denominador cuenta unicamente
+// los votos de las peliculas con recaudacion registrada, para que numerador
+// y denominador se refieran al mismo conjunto de filas.
+Recaudación Promedio por Voto =
+DIVIDE (
+    SUM ( movies[GROSS_USD] ),
+    CALCULATE ( SUM ( movies[VOTES] ), NOT ISBLANK ( movies[GROSS_USD] ) )
+)
